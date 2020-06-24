@@ -1,0 +1,45 @@
+{
+  "include": [
+    "next-env.d.ts",
+    "types/**/*.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": [ "dom", "dom.iterable", "esnext" ],
+    "allowJs": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "$gqlQueryTypes/*": ["src/lib/gqlQueryTypes/*"],
+      "$withApollo": ["src/lib/apollo/withApollo.tsx"],
+      "$components/*": ["src/components/*"],
+      "$queries": ["src/lib/queries/index.ts"],
+    },
+    /* Basic Options */
+    /* Don't check syntax of library decleration files */
+    "skipLibCheck": true,
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "noImplicitAny": false,
+    "noImplicitThis": false, // Raise error on 'this' expressions with an implied 'any' type.
+    /* Additional Checks */
+    "noUnusedLocals": true,
+    "noUnusedParameters": false, // some parameters may be there for documentation e.g. in map, filter
+    /* you can [import React from 'react'] instead of [import * as React from 'react'] */
+    "esModuleInterop": true,
+    /* this should be enabled by esModuleInterop but vscode cannot detect this properly */
+    "allowSyntheticDefaultImports": true,
+    /* try to prevent the terrible case sensitivity bug in imports on case-insensitive file systems*/
+    "forceConsistentCasingInFileNames": true
+  },
+}

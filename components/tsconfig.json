@@ -1,0 +1,38 @@
+{
+  "include": ["src/**/*", ".storybook/**/*"],
+  "exclude": ["node_modules", "build", "scripts"],
+  "compilerOptions": {
+    "outDir": "build",
+    "target": "es5",
+    "lib": ["es5", "dom", "scripthost"],
+    "jsx": "react",
+    "baseUrl": "./src",
+    "declaration": true,
+    "declarationMap": true,
+    /* Basic Options */
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "removeComments": true,
+    "importHelpers": true, // Import typescript helpers (like emit matadata code) from 'tslib'.
+    /* Don't check syntax of library decleration files */
+    "skipLibCheck": true,
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "noImplicitAny": false,
+    "noImplicitThis": false, // Raise error on 'this' expressions with an implied 'any' type.
+    /* Additional Checks */
+    "noUnusedLocals": true,
+    "noUnusedParameters": false, // some parameters may be there for documentation e.g. in map, filter
+    /* you can [import React from 'react'] instead of [import * as React from 'react'] */
+    "esModuleInterop": true,
+    /* this should be enabled by esModuleInterop but vscode cannot detect this properly */
+    "allowSyntheticDefaultImports": true,
+    /* Makes Nest Dependency Injection System Possible */
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    /* try to prevent the terrible case sensitivity bug in imports on case-insensitive file systems*/
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": false,
+  },
+}
